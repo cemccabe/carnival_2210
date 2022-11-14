@@ -16,4 +16,11 @@ RSpec.describe do
   it 'has an empty default preferences array' do
     expect(@visitor1.preferences).to eq([])
   end
+
+  it 'stores Visitor preferences' do
+    @visitor1.add_preference(:gentle)
+    @visitor1.add_preference(:water)
+    
+    expect(@visitor1.preferences).to eq([:gentle, :water])
+  end
 end
