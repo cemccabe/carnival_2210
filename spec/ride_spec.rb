@@ -26,4 +26,12 @@ RSpec.describe do
   it 'has a default rider log that is an empty hash' do
     expect(@ride1.rider_log).to eq({})
   end
+
+  it 'stores boarded riders in the rider_log using #board_riders method' do
+    @ride1.board_rider(@visitor1)
+    @ride1.board_rider(@visitor2)
+    @ride1.board_rider(@visitor1)
+
+    expect(@ride1.rider_log).to eq({@visitor1, @visitor2})
+  end
 end
