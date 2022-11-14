@@ -12,4 +12,10 @@ class Carnival
       ride.rider_log.values.sum
     end
   end
+
+  def carnival_revenue
+    @rides.sum do |ride|
+      ride.total_revenue
+    end
+  end
 end
