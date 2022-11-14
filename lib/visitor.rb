@@ -1,9 +1,9 @@
 class Visitor
-  attr_reader :name, :age, :spending_money
+  attr_reader :name, :height, :spending_money
 
-  def initialize(name, age, spending_money)
+  def initialize(name, height, spending_money)
     @name = name
-    @age = age
+    @height = height
     @spending_money = spending_money
   end
 end
