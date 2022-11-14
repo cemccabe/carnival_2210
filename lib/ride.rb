@@ -12,6 +12,10 @@ class Ride
     @admission_fee = attributes[:admission_fee]
     @excitement = attributes[:excitement]
     @total_revenue = 0
-    @rider_log = {}
+    @rider_log = Hash.new(0)
+  end
+
+  def board_rider(visitor)
+    @rider_log[visitor] += 1
   end
 end
