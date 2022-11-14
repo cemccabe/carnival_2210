@@ -9,8 +9,8 @@ RSpec.describe do
   end
 
   it 'exists and has a duration and list of rides' do
-    expect(@carnival).to be_a(Carnival)
-    expect(@carnival.duration).to eq('4 days')
-    expect(@carnival.rides).to eq(['Carousel', 'Ferris Wheel'])
+    expect(@carnival1).to be_a(Carnival)
+    expect(@carnival1.duration).to eq('4 days')
+    expect(@carnival1.rides).to eq(['Carousel', 'Ferris Wheel'])
   end
 end
