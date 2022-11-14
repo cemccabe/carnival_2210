@@ -18,7 +18,7 @@ class Ride
   end
 
   def board_rider(visitor)
-    if (visitor.preferences.include?(@excitement)) && (visitor.height >= @min_height)
+    if (visitor.preferences.include?(@excitement)) && (visitor.tall_enough?(@min_height))
       visitor.spending_money -= @admission_fee
       @total_revenue += @admission_fee
       @rider_log[visitor] += 1
